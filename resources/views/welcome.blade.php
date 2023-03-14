@@ -2,9 +2,13 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST">
         @csrf
-
+        <div class="logo w-30 h-30 mt-4">
+            <a href="/">
+                <img src="{{ asset('img/UFRPE.png') }}" alt="logo-ufrpe" />
+            </a>
+        </div>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
